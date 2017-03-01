@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<section class="post-container">
+    <div class="container">
+    <% if (thoughts.length){ %>
+      <% thoughts.forEach(function(item){ %>
+        <div class="panel panel-primary"> 
+            <p class="pull-right date"><%= item.created_at %></p>
+            <div class="panel-heading"> 
+                <h3 class="panel-title"><%= item.subject %></h3> 
+            </div>
+            <div class="panel-body"><%= item.content %></div> 
+        </div>
+      <% }) %>
+    <% } else { %>
+    <div class="not-found">
+      No records found!!!
+    </div>
+    <% } %>  
+    </div>
+</section>
+<% include ./partials/footer %>

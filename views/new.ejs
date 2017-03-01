@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+<section>
+    <div class="create-post">
+        <form action="/form" class="new-post-form" method="POST">
+            <label>Subject</label>
+            <div class="form-group">
+                <input type="text" name="subject" class="form-control" placeholder="Subject" required="true" maxlength="50">
+            </div>
+            <label>Content</label>
+            <textarea class="form-control" placeholder="Write your thoughts..." name="content" required="true" rows="5" maxlength="250"></textarea>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+    </div>
+</section>
+<% include ./partials/footer %>
